@@ -1,0 +1,5 @@
+git init #git dahil etmek
+git add . # Bütün dosyalarý seç
+git commit -m"Commit mesajý" #Ne yüklüyorsun ne yaptýn
+git romote "" #git repo linki
+git push origin master #ana dizine yükle

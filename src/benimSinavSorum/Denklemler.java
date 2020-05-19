@@ -1,13 +1,13 @@
 package benimSinavSorum;
 
 class Denklemler{
-	public int x1 = 0;
-	public int a = 0;
-	public int b = 0;
-	public int c = 0;
-	public int x2 = 0;
+	public double x1 = 0;
+	public double a = 0;
+	public double b = 0;
+	public double c = 0;
+	public double x2 = 0;
 	public String kok ="";
-	private int d = 0;
+	private double d = 0;
     
 	public Denklemler(int a,int b){
     	this.a =a;
@@ -23,16 +23,16 @@ class Denklemler{
     public void setA(int a){
     	this.a=a;
     }
-    public void setX1(int a){
-    	this.a=a;
+    public void setX1(double x1){
+    	this.a=x1;
     }
-    public void setX2(int a){
-    	this.a=a;
+    public void setX2(double x2){
+    	this.a=x2;
     }
     public void setB(int b){
     	this.b=b;
     }
-    public void setD(int d){
+    public void setD(double d){
     	this.d= d;
     }
     public void setKok(String kok){
@@ -41,19 +41,19 @@ class Denklemler{
     public void setc(int c){
     	this.c=c;
     }
-    public int getA(){
+    public double getA(){
     return a;
     }
     public String getKok(){
         return kok;
         }
-    public int getX1(){
+    public double getX1(){
         return x1;
     }
-    public int getX2(){
+    public double getX2(){
         return x2;
     }
-    public int getB(){
+    public double getB(){
     return b;
     }
     public int denklemCoz(int a, int b)
@@ -61,27 +61,31 @@ class Denklemler{
     	int sonuc = -b / a;
 		return sonuc;
 	}
-	public int[] denklemCoz(int a, int b,int c)
+	public double[] denklemCoz(int a, int b,int c)
 	{
-		int d = (b*b) - 4*a*c;
+		double d = (b*b) - 4*a*c;
 		setD(d);
-		int[] kokler = new int[2];
+		double[] kokler = new double[2];
 		if(a != 0) {
 			if(d > 0) {
-				int x1 = (int) ((-b + Math.sqrt(d)) / 2*a);
-				int x2 = (int) ((-b - Math.sqrt(d)) / 2*a);
+				double karekok = Math.sqrt(d);
+				double bolum = -b + karekok;
+				double bolum2 = -b - karekok;
+				double alt = 2*a;
+				double x1 =  bolum / alt;
+				double x2 =  bolum2 / alt;
 				setX1(x1);
 				setX2(x2);
 				kokler[0]= x1;
 				kokler[1]= x2;
 			}
 			else if(d == 0) {
-				int x1 = -b / 2*a;
-				int x2 = this.x1;
+				double alt = 2*a;
+				double x1 = -b / alt;
 				setX1(x1);
 				setX2(x2);
 				kokler[0]= x1;
-				kokler[1]= x2;
+				kokler[1]= x1;
 			}
 			else {
 				kokler[0]= 0;

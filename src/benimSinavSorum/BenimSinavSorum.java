@@ -35,7 +35,7 @@ public class BenimSinavSorum {
 	    private static void menuGoster(){
 	        System.out.println("1. ve 2. dereceden denklem çözümü yapabilirsiniz");
 	        System.out.println("Örnek kök deðerleri 6 8 2");
-	        KokKontrolEt kok = new KokKontrolEt(6, 8,2);
+	        KokKontrolEt kok = new KokKontrolEt(1, -4 ,4);
 		    System.out.println(kok);
 	        System.out.println("Denklem derecenizi seçiniz: (1 veya 2)");
 	    }
