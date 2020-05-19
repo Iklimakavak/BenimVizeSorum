@@ -8,36 +8,36 @@ public class BenimSinavSorum {
 		 Scanner scan = new Scanner(System.in);
 		 int kontrol = scan.nextInt();
 		 if(kontrol == 1) {
-		     System.out.println("A deðerini giriniz: ");
+		     System.out.println("A deÄ‘erini giriniz: ");
 			 int a = scan.nextInt();
-			 System.out.println("B deðerini giriniz: ");
+			 System.out.println("B deÄ‘erini giriniz: ");
 			 int b = scan.nextInt();
 			 KokKontrolEt kok = new KokKontrolEt(a, b);
 		     System.out.println(kok);
 		 }
 		 else if(kontrol == 2) {
-			 System.out.print("A deðerini giriniz: ");
+			 System.out.print("A deÄ‘erini giriniz: ");
 			 int a = scan.nextInt();
-			 System.out.print("B deðerini giriniz: ");
+			 System.out.print("B deÄ‘erini giriniz: ");
 			 int b = scan.nextInt();
-			 System.out.print("C deðerini giriniz: ");
+			 System.out.print("C deÄ‘erini giriniz: ");
 			 int c = scan.nextInt();
 			 KokKontrolEt kok = new KokKontrolEt(a, b,c);
 		     System.out.println(kok);
 		 }
 		 else {
-		        System.out.println("Hatalý giriþ yapýldý");
+		        System.out.println("HatalÃ½ giriÅ£ yapÃ½ldÃ½");
 
 		 }
 		  
 
 	    }
 	    private static void menuGoster(){
-	        System.out.println("1. ve 2. dereceden denklem çözümü yapabilirsiniz");
-	        System.out.println("Örnek kök deðerleri 6 8 2");
-	        KokKontrolEt kok = new KokKontrolEt(1, -4 ,4);
+	        System.out.println("1. ve 2. dereceden denklem Ã§Ã¶zÃ¼mÃ¼ yapabilirsiniz");
+	        System.out.println("Ã–rnek kÃ¶k deÄ‘erleri 6 8 2");
+	        KokKontrolEt kok = new KokKontrolEt(6, 8 ,2);
 		    System.out.println(kok);
-	        System.out.println("Denklem derecenizi seçiniz: (1 veya 2)");
+	        System.out.println("Denklem derecenizi seÃ§iniz: (1 veya 2)");
 	    }
 
 }
